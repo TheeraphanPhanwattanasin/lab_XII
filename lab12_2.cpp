@@ -61,10 +61,10 @@ int main(){
 		if(playerAction==1 || playerAction==2) break;
 	}while(true);
 	if(playerAction == 1){
-		int thirdp = drawCard();
+		playerCards[2] = drawCard();
 		cout << "Player draws the 3rd card!!!" << "\n";
-		cout << "Your 3rd card: " << cardNames[thirdp] << "\n";
-        playerScore	= calScore(playerScore,thirdp,0);
+		cout << "Your 3rd card: " << cardNames[playerCards[2]] << "\n";
+        playerScore	= calScore(playerScore,playerCards[2],0);
 		cout << "Your new score: " << playerScore <<"\n";
 	}
 	cout << "------------ Turn end -------------------\n\n";
@@ -77,10 +77,10 @@ int main(){
 	cout << "Yugi's score: " << yugiScore << "\n";
 	yugiAction = findYugiAction(yugiScore);
 	if(yugiAction == 1){
-		int thirdy = drawCard();
+		playerCards[2] = drawCard();
 		cout << "Yugi draws the 3rd card!!!\n";
-		cout << "Yugi's 3rd card: " << cardNames[thirdy] <<"\n";
-		yugiScore = calScore(yugiScore,thirdy,0);
+		cout << "Yugi's 3rd card: " << cardNames[playerCards[2]] <<"\n";
+		yugiScore = calScore(yugiScore,playerCards[2],0);
 		cout << "Yugi's new score: " << yugiScore << "\n";
 	}
 	cout << "------------ Turn end -------------------\n";
